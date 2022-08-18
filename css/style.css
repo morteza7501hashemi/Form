@@ -1,0 +1,193 @@
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: inherit;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  color: #777;
+  font: 400 1.6rem/1.7 "Poppins", "sans-serif";
+  background: url(../img/background.svg) repeat;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 90%;
+  color: #fff;
+  font: 400 1.6rem/1.7 "Poppins", "sans-serif";
+  text-align: center;
+  background: #17a589;
+  padding: 1.5rem 1rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.btn:hover {
+  background: #117864;
+  box-shadow: 0.4rem 0.4rem 1rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.5rem);
+}
+
+.form {
+  width: 31rem;
+  max-width: 38rem;
+  background: #48c9b0;
+  margin: 5rem 2rem;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap column;
+  gap: 2rem;
+}
+
+@media only screen and (max-width: 75em) {
+  .form {
+    width: 31rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .form {
+    width: 33rem;
+  }
+}
+
+.form__img-box {
+  width: 10rem;
+  height: 10rem;
+  background: #fff;
+  margin: 2rem 0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.form__img-box::before {
+  content: "";
+  border: 5px solid transparent;
+  border-top-color: #1a96e9;
+  border-right-color: #1a96e9;
+  border-left-color: #1a96e9;
+  border-radius: 50%;
+  position: absolute;
+  inset: -1.5rem;
+  animation: spin 1.5s reverse cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  z-index: 1;
+}
+
+.form__img {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+}
+
+.form__group {
+  width: 100%;
+  position: relative;
+}
+
+.form__input {
+  width: 100%;
+  color: inherit;
+  font: 400 1.6rem/1.7 "Poppins", "sans-serif";
+  padding: .6rem 1.5rem .6rem 3.5rem;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+.form__input::placeholder {
+  color: inherit;
+}
+
+.form__input:focus {
+  border: 2px solid #1a96e9;
+}
+
+.form__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 33%;
+  left: 4%;
+}
+
+@media only screen and (max-width: 75em) {
+  .form__icon {
+    top: 34%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .form__icon {
+    top: 35%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .form__icon {
+    top: 36%;
+  }
+}
+
+.form__icon-fullname {
+  background: url(../icon/user.svg) no-repeat center;
+}
+
+.form__icon-email {
+  background: url(../icon/email.svg) no-repeat center;
+}
+
+.form__icon-username {
+  background: url(../icon/user.svg) no-repeat center;
+}
+
+.form__icon-password {
+  background: url(../icon/password.svg) no-repeat;
+}
+/*# sourceMappingURL=style.css.map */

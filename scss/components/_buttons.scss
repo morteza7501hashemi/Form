@@ -1,0 +1,17 @@
+.btn {
+    width: 90%;
+    color: $color-white;
+    font: $font;
+    text-align: center;
+    background: $color-primary-dark;
+    padding: 1.5rem 1rem;
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+        background: darken($color-primary-dark,10%);
+        box-shadow: .4rem .4rem 1rem rgba($color-black,.3);
+        transform: translateY(-.5rem);
+    }
+}

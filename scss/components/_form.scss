@@ -1,0 +1,107 @@
+.form {
+    width: 31rem;
+    max-width: $max-width;
+    background: $color-primary;
+    margin: 5rem 2rem;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 1rem 2rem rgba($color-black,.2);
+    @include flex;
+    flex-flow: wrap column;
+    gap: 2rem;
+
+    @include respond(tab-land) {   
+        width: 31rem;
+    }
+
+    @include respond(tab-port) {   
+        width: 33rem;
+    }
+
+    &__img-box {
+        width: 10rem;
+        height: 10rem;
+        background: $color-white;
+        margin: 2rem 0;
+        border-radius: 50%;
+        @include flex;
+        position: relative;
+
+        &::before {
+            content: "";
+            border: 5px solid transparent;
+            border-top-color: $color-secondary;
+            border-right-color: $color-secondary;
+            border-left-color: $color-secondary;
+            border-radius: 50%;
+            position: absolute;
+            inset: -1.5rem;
+            animation: spin 1.5s reverse cubic-bezier(.5,0,.5,1) infinite;
+            z-index: 1;
+        }
+    }
+    
+    &__img {
+        width: 4rem;
+        height: 4rem;
+        display: block;
+    }
+
+    &__group {
+        width: 100%;
+        position: relative;
+    }
+    
+    &__input {
+        width: 100%;
+        color: inherit;
+        font: $font;
+        padding: .6rem 1.5rem .6rem 3.5rem;
+        border: 2px solid $color-white;
+        border-radius: 5px;
+    }
+    
+    &__input::placeholder {
+        color: inherit;
+    }
+    
+    &__input:focus {
+        border: 2px solid $color-secondary;
+    }
+        
+    &__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        top: 33%;
+        left: 4%;
+
+        @include respond(tab-land) {   
+            top: 34%;
+        }
+
+        @include respond(tab-port) {   
+            top: 35%;
+        }
+
+        @include respond(phone) {   
+            top: 36%;
+        }
+    }
+
+    &__icon-fullname {
+        background: url(../icon/user.svg) no-repeat center;
+    }
+
+    &__icon-email {
+        background: url(../icon/email.svg) no-repeat center;
+    }
+    
+    &__icon-username {
+        background: url(../icon/user.svg) no-repeat center;
+    }
+    
+    &__icon-password {
+        background: url(../icon/password.svg) no-repeat;
+    }
+}
